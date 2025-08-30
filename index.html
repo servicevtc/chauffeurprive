@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Votre Chauffeur Privé – VTC Côte d’Azur</title>
+  <title>Chauffeur Privé – VTC Côte d’Azur</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-    :root { --blue: #005eff; --light: #f0f4ff; }
+    :root { --blue: #6B7280; --light: #f0f4ff; } /* gris dominant */
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
     body { background: #f5f5f5; color: #333; }
     header {
-      background: url('./javygo-qcMJ_BeDHVE-unsplash.jpg') center/cover no-repeat;
+      background: url('./alexandr_bendus-A6aKVs_U7xc-unsplash.jpg') center/cover no-repeat;
       height: 55vh; display: flex; flex-direction: column; justify-content: center;
       align-items: center; text-align: center; color: #fff;
     }
@@ -49,7 +49,7 @@
       background: var(--blue); color: #fff; border: none;
       cursor: pointer; transition: background .3s;
     }
-    .calculator button:hover { background: #0041c7; }
+    .calculator button:hover { background: #4b5563; }
 
     .about-box {
       background: var(--light); border-left: 6px solid var(--blue);
@@ -75,12 +75,13 @@
       color: #000; text-decoration: underline; font-weight: 600;
       display: inline-block; margin-top: .2rem;
     }
+    .legal { margin-top: 1rem; font-size: 0.85rem; color: #555; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Votre Chauffeur Privé VTC</h1>
-    <p>Antibes • Cannes • Nice • Monaco • Saint‑Tropez</p>
+    <h1>Chauffeur Privé</h1>
+    <p>Antibes • Nice • Cannes</p>
   </header>
 
   <main>
@@ -88,20 +89,20 @@
     <div class="services">
       <div class="card">
         <h3>Transferts aéroports & gares</h3>
-        <p>Nice–Côte d’Azur, Cannes–Mandelieu, Monaco Heliport…</p>
+        <p>Nice–Côte d’Azur, Cannes–Mandelieu, gares SNCF…</p>
       </div>
       <div class="card">
-        <h3>Mise à disposition</h3>
-        <p>Chauffeur dédié pour vos rendez-vous pro ou perso.<br><strong>80 € / heure</strong></p>
+        <h3>Longues distances</h3>
+        <p>Trajets inter-villes et inter-régions, confort et sérénité.</p>
       </div>
       <div class="card">
-        <h3>Événementiel</h3>
-        <p>Navettes VIP pour mariages, congrès, soirées privées…</p>
+        <h3>VTC 7j/7</h3>
+        <p>Disponibilité quotidienne selon vos besoins.</p>
       </div>
     </div>
 
     <p class="services-note">
-      Flotte de véhicules disponible sur demande avec chauffeurs partenaires de confiance.
+      Mise à disposition possible : <strong>100 € / heure</strong>.
     </p>
 
     <div class="calculator">
@@ -117,43 +118,53 @@
     </div>
 
     <div class="whatsapp-container">
-      <a class="whatsapp-button" href="https://wa.me/33615287073" target="_blank">📲 Réserver sur WhatsApp</a>
+      <a class="whatsapp-button" href="https://wa.me/33609454924" target="_blank">📲 Réserver sur WhatsApp</a>
     </div>
 
     <div class="about-box">
-      <p>Fort d’une solide expérience dans le service haut de gamme, je propose un transport VTC discret et personnalisé.<br><br>
-      Basé à Antibes, j’opère sur toute la Côte d’Azur : Cannes, Nice, Monaco, Saint-Tropez et au-delà.<br><br>
-      Véhicule premium équipé de bouteilles d’eau et de chargeurs pour assurer votre confort.<br><br>
-      Choisissez un transport ponctuel, élégant et sécurisé pour chacun de vos trajets.</p>
+      <p>
+        Fort d’une solide expérience dans le service haut de gamme, je propose un transport VTC discret et personnalisé.<br><br>
+        Basé à Antibes, j’opère sur toute la Côte d’Azur, notamment Antibes, Nice et Cannes.<br><br>
+        Véhicule BMW Série 3 équipé pour votre confort (eau, chargeurs).<br><br>
+        Choisissez un transport ponctuel, élégant et sécurisé pour chacun de vos trajets.
+      </p>
     </div>
   </main>
 
   <footer>
     <h2>Contact & Réservation</h2>
     <div>
-      📞 <a href="tel:0615287073">06 15 28 70 73</a><br>
-      📧 <a href="mailto:monchauffeurvtc06@gmail.com">monchauffeurvtc06@gmail.com</a>
+      📞 <a href="tel:0609454924">06 09 45 49 24</a><br>
+      📧 <a href="mailto:alexis.herlory@gmail.com">alexis.herlory@gmail.com</a>
     </div>
-    <p style="margin-top: 1rem; font-size: 0.85rem; color: #555">
-      © 2025 Votre Chauffeur Privé – Tous droits réservés
-    </p>
+    <div class="legal">
+      © 2025 Chauffeur Privé – Tous droits réservés<br>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <span style="margin:0 8px;">•</span>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </div>
   </footer>
 
   <!-- ✅ Google Maps API avec callback -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz1sjQEMHqViwfAKUdYskUx13OiIVUi-k&libraries=places&callback=initAutocomplete" async defer></script>
 
   <script>
+    const RATE_PER_KM = 2.20;   // €/km
+    const MIN_FARE    = 15;     // €
+    const AIRPORT_FEE = 10;     // €
+    const HOURLY_RATE = 100;    // € / h (info)
+
     let autocompleteStart, autocompleteEnd;
 
     function initAutocomplete() {
       autocompleteStart = new google.maps.places.Autocomplete(document.getElementById('start'));
-      autocompleteEnd = new google.maps.places.Autocomplete(document.getElementById('end'));
+      autocompleteEnd   = new google.maps.places.Autocomplete(document.getElementById('end'));
     }
 
     document.getElementById('price-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      const start = document.getElementById('start').value.toLowerCase();
-      const end = document.getElementById('end').value.toLowerCase();
+      const start = document.getElementById('start').value;
+      const end   = document.getElementById('end').value;
 
       const service = new google.maps.DistanceMatrixService();
       service.getDistanceMatrix(
@@ -165,15 +176,23 @@
         },
         function(response, status) {
           if (status === 'OK') {
-            const distanceText = response.rows[0].elements[0].distance.text;
-            const km = parseFloat(distanceText.replace(',', '.'));
-            let price = km * 2.1;
-
-            if (start.includes("aéroport") || end.includes("aéroport")) {
-              price += 10;
+            const element = response.rows[0].elements[0];
+            if (!element || element.status !== 'OK') {
+              document.getElementById('price-result').textContent = "Erreur : distance non disponible.";
+              return;
             }
+            const distanceText = element.distance.text; // ex: "12,3 km"
+            const km = parseFloat(distanceText.replace(',', '.'));
 
-            if (price < 15) price = 15;
+            let price = km * RATE_PER_KM;
+
+            const s = (start || '').toLowerCase();
+            const d = (end || '').toLowerCase();
+            const airportKeywords = ['aéroport', 'aeroport', 'airport', 'nce', 'nice côte d’azur', 'nice cote d azur'];
+            const hasAirport = airportKeywords.some(k => s.includes(k) || d.includes(k));
+            if (hasAirport) price += AIRPORT_FEE;
+
+            if (price < MIN_FARE) price = MIN_FARE;
 
             document.getElementById('price-result').innerHTML = `<strong>Estimation : ${price.toFixed(2)} €</strong>`;
           } else {
@@ -183,9 +202,5 @@
       );
     });
   </script>
-  <footer>
-  <a href="mentions-legales.html">Mentions légales</a>
-    <a href="confidentialite.html" style="margin-left:20px;">Politique de confidentialité</a>
-</footer>
 </body>
 </html>

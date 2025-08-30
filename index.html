@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chauffeur Privé – VTC Côte d’Azur</title>
+  <title>Toi Chauffeur Privé – VTC Côte d’Azur</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
     :root { --blue: #6B7280; --light: #f0f4ff; } /* gris dominant */
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
     body { background: #f5f5f5; color: #333; }
     header {
+      /* 📷 Image libre de droit Unsplash (Alexandr Bendus) */
       background: url('./alexandr_bendus-A6aKVs_U7xc-unsplash.jpg') center/cover no-repeat;
       height: 55vh; display: flex; flex-direction: column; justify-content: center;
       align-items: center; text-align: center; color: #fff;
@@ -76,12 +77,13 @@
       display: inline-block; margin-top: .2rem;
     }
     .legal { margin-top: 1rem; font-size: 0.85rem; color: #555; }
+    .credit { margin-top: .5rem; font-size: .8rem; color: #777; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Chauffeur Privé</h1>
-    <p>Antibes • Nice • Cannes</p>
+    <h1>Toi Chauffeur Privé</h1>
+    <p>VTC 24h/24 Côte d’Azur</p>
   </header>
 
   <main>
@@ -102,7 +104,7 @@
     </div>
 
     <p class="services-note">
-      Mise à disposition possible : <strong>100 € / heure</strong>.
+      Zones : <strong>Antibes • Nice • Cannes</strong> — Mise à disposition : <strong>100 € / heure</strong>.
     </p>
 
     <div class="calculator">
@@ -124,8 +126,8 @@
     <div class="about-box">
       <p>
         Fort d’une solide expérience dans le service haut de gamme, je propose un transport VTC discret et personnalisé.<br><br>
-        Basé à Antibes, j’opère sur toute la Côte d’Azur, notamment Antibes, Nice et Cannes.<br><br>
-        Véhicule BMW Série 3 équipé pour votre confort (eau, chargeurs).<br><br>
+        Basé à Antibes, j’opère sur toute la Côte d’Azur (Antibes, Nice, Cannes).<br><br>
+        Véhicule <strong>BMW Série 3</strong> équipé pour votre confort (eau, chargeurs).<br><br>
         Choisissez un transport ponctuel, élégant et sécurisé pour chacun de vos trajets.
       </p>
     </div>
@@ -138,10 +140,13 @@
       📧 <a href="mailto:alexis.herlory@gmail.com">alexis.herlory@gmail.com</a>
     </div>
     <div class="legal">
-      © 2025 Chauffeur Privé – Tous droits réservés<br>
+      © 2025 Toi Chauffeur Privé – Tous droits réservés<br>
       <a href="mentions-legales.html">Mentions légales</a>
       <span style="margin:0 8px;">•</span>
       <a href="confidentialite.html">Politique de confidentialité</a>
+      <div class="credit">
+        Photo : <a href="https://unsplash.com/photos/A6aKVs_U7xc" target="_blank" rel="noopener">Alexandr Bendus / Unsplash</a>
+      </div>
     </div>
   </footer>
 
@@ -149,6 +154,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz1sjQEMHqViwfAKUdYskUx13OiIVUi-k&libraries=places&callback=initAutocomplete" async defer></script>
 
   <script>
+    // Configuration issue de la fiche Google Sheets
     const RATE_PER_KM = 2.20;   // €/km
     const MIN_FARE    = 15;     // €
     const AIRPORT_FEE = 10;     // €
